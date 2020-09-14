@@ -25,6 +25,9 @@
 \usepackage{helvet} % Default font is the helvetica postscript font
 %\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
 
+%% Enable block commenting
+\usepackage[]{verbatim}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -32,6 +35,8 @@
     filecolor=cyan,      
     urlcolor=blue,
 }
+
+\usepackage{url}
 
 \setlength{\textwidth}{5.1in} % Text width of the document
 
@@ -41,13 +46,13 @@
 %	NAME AND ADDRESS SECTION
 %----------------------------------------------------------------------------------------
 
-\moveleft.5\hoffset\centerline{\LARGE\bf Hyerin Cho} % Your name at the top
+\moveleft.5\hoffset\centerline{\LARGE\bf Hyerin Cho (조혜린)} % Your name at the top
  
 \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
 
 \moveleft.5\hoffset\centerline{14 Osan-ro 160beon-gil}
 \moveleft.5\hoffset\centerline{Osan-si, Gyeonggi-do, 18143, Rep. of Korea}
-\moveleft.5\hoffset\centerline{chyerin1996@gmail.com, riniyuni123@gist.ac.kr}
+\moveleft.5\hoffset\centerline{hyerin.cho@cfa.harvard.edu, chyerin1996@gmail.com}
 \moveleft.5\hoffset\centerline{LinkedIn: www.linkedin.com/in/hyerin-cho-gist/}
 %\moveleft.5\hoffset\centerline{Website: https://hyerincho.github.io}
 
@@ -60,30 +65,37 @@
 %----------------------------------------------------------------------------------------
  
 \section{EDUCATION}  
+{\bf Center for Astrophysics $\vert$ Harvard \& Smithsonian} \hfill Sep. 2020 - Present\\
+Ph.D. Candidate
 
-{\bf GIST(Gwangju Institute of Science and Technology)}, Korea\\
-{\sl B.S. Physics Major, Math Minor}\hfill March 2015 - Present
+{\bf GIST(Gwangju Institute of Science and Technology)}, {\sl cum laude} \\
+{\sl B.S. Physics Major/Math Minor}\hfill Mar. 2015 - Feb. 2020
 \begin{itemize}
-\small\item[] Overall GPA: 4.0/4.5\\
-Major GPA: 4.4/4.5 \footnote{The courses with PS(Physics) course code in GIST transcript, including courses taken at Caltech.}
+\small\item[] Total GPA: 4.0/4.5 (3.7/4.0 U.S. scale)\\
+Major GPA: 4.4/4.5 (4.0/4.0 U.S. scale) \footnote{The courses with PS(Physics) course code in GIST transcript, including courses taken at Caltech.}
 \end{itemize}
 
-{\bf California Institute of Technology}  \hfill September 2017 - December 2017 \\
+{\bf California Institute of Technology}  \hfill Sep. 2017 - Dec. 2017 \\
 {\sl Study Abroad Program}
 \begin{itemize}
-\small\item[] Ph127a Statistical Mechanics,\\
+\small\item[] Total GPA: 3.9/4.3
+\begin{comment}
+Ph127a Statistical Mechanics,\\
 Ph77a Advanced Physics Laboratory,\\
 ACM116 Introduction to Probability Models,\\
 Ay20 Basic Astronomy and the Galaxy,\\
 Ph103 Atomic and Molecular Physics(audit), Ph125a Quantum Mechanics(audit)
+\end{comment}
 \end{itemize}
 
-{\bf University of California, Berkeley}  \hfill June 2016 - August 2016 \\
+{\bf University of California, Berkeley}  \hfill Jun. 2016 - Aug. 2016 \\
 {\sl Summer Session}
+\begin{comment}
 \begin{itemize}
 \small\item[] Chemical Structure and Reactivity\\
 The Beauty and Joy of Computing
 \end{itemize}
+\end{comment}
 
 
 %----------------------------------------------------------------------------------------
@@ -92,78 +104,110 @@ The Beauty and Joy of Computing
  
 \section{RESEARCH EXPERIENCE}
 
-{\bf OzGrav, Swinburne University of Technology} \hfill March 2019 - June 2019 \\
+{\bf Seoul National University} \hfill Mar. 2020 - Aug. 2020 \\
+{\sl Visiting Student Intern} \\
+Supervisor: Prof. Ji-hoon Kim
+\begin{itemize}
+\item[] %{\sl }  \\
+Work in progress
+\end{itemize} 
+
+{\bf OzGrav, Swinburne University of Technology} \hfill Mar. 2019 - Jun. 2019 \\
 {\sl Visiting Student Intern} \\
 Supervisors: Prof. Matthew Bailes, Prof. Adam Deller, Dr. Ryan Shannon
 \begin{itemize}
-\item[] {\sl High Time Resolution Voltage Data and their Analysis of Localized ASKAP FRBs.}\\
-The work is continued from the previous project from CIRA. I worked on improving the pipeline of recovering full time resolution of localized ASKAP FRB voltage data. I have generalized this pipeline for any localized sources for ASKAP, and tested the pipeline. I recovered the full time resolution ($\sim 3~\mathrm{ns}$) for three ASKAP localized FRBs: FRB180924, FRB181112, and FRB190102. Not only have I recovered the full time resolution of the three FRBs, but I have also done some analysis on the high time resolution data. I have modeled FRB180924 pulse to measure its rising time and scattering time, and I have polarization calibrated and analyzed FRB181112. For FRB190102, the polarization calibration and analysis is still in progress. % \\
+\item[] {\sl Localized ASKAP FRBs' high time resolution and their analysis.}\\
+The work is continued from the previous project from CIRA, which is improving my software that recovers full time resolution of localized ASKAP FRB voltage data. I have generalized this software for any localized sources for ASKAP and have done high time resolution analysis. This has opened up new ways to study both FRBs and the matter that their radiation encounters on its trek through the Universe. My software and analysis led to new results about the properties of matter in the outer parts of galaxies (its “halo”), as probed by an FRB. Therefore, I am a co-author of a paper on these results, published in the journal \textit{Science} in October 2019.  % \\
 %{\sl Population Analysis for Radio Telescopes.}\\
 %Work in progress.
 \end{itemize} 
 
-{\bf Curtin Institute of Radio Astronomy (CIRA)} \hfill December 2018 - February 2019 \\
+{\bf Curtin Institute of Radio Astronomy (CIRA)} \hfill Dec. 2018 - Feb. 2019 \\
 {\sl Visiting Research Associate / Summer Studentship} \\
-Supervisors: Prof. Jean-Pierre Macquart, Dr. Clancy James
+Supervisors: Prof. Jean-Pierre Macquart, Dr. Clancy James, Dr. Ian Morrison
 \begin{itemize}
-\item[] {\sl Recovering the Full Time Resolution of ASKAP FRB Voltage Data.}\\
-As a member of The Commensal Real-time ASKAP Fast Transients Survey (\href{http://astronomy.curtin.edu.au/research/craft/}{CRAFT}) collaboration, I worked on inverting channelization of voltage data to retrieve its full time resolution. ASKAP's high time-resolved voltage data enables quantum optical analysis of FRBs. This new diagnosis of FRBs is expected to reveal information about the source's emission properties, and thus help solve the mystery of its origin. I took voltage data from ASKAP and recovered its full time resolution as an off-line processing. In particular, I used ASKAP's first localized FRB180924 to start with, but this process will be applicable to all ASKAP's localized FRBs. Most of my work was done with Python to coherently sum signals from antennas, invert the channelization (PFB), and coherently de-disperse.
+\item[] {\sl Recovering the full time resolution of ASKAP FRB voltage data.}\\
+As a member of The Commensal Real-time ASKAP Fast Transients Survey (\href{http://astronomy.curtin.edu.au/research/craft/}{CRAFT}) collaboration, I worked on inverting channelization of voltage data (a data processing method called polyphase filterbank inversion) to retrieve its full time resolution. Having access to ASKAP's highly resolved voltage data is expected to reveal significant information including the source's emission properties and FRBs' fine temporal and spectral structure.
+%I took voltage data, which preserves phase information of light, from ASKAP and recovered its full time resolution as an off-line processing.
 \end{itemize} 
+% quantum optical analysis
 
-{\bf Caltech Theoretical Astrophysics} \hfill June 2018 - August 2018 \\
+{\bf Caltech Theoretical Astrophysics} \hfill Jun. 2018 - Aug. 2018 \\
 {\sl Summer Undergraduate Research Fellow} \\
 Supervisor: Prof. Sterl Phinney
 \begin{itemize}
-\item[] {\sl Numerical Modeling of Time-Independent Accretion Discs with Instabilities.}\\
-I wrote Python scripts from scratch that solves the time-independent accretion disc equations numerically. These included OPAL and Ferguson opacities, equations of state, and treatment of convection. The purpose of the project was to make realistic and general models of accretion discs covering all parameter space from Cataclysmic Variables to Active Galactic Nuclei and to investigate instabilities caused by the onset of convection and hydrogen recombination.
+\item[] {\sl Numerical modeling of time-independent accretion discs with instabilities.}\\
+I wrote Python scripts from scratch that solves the time-independent accretion disc equations numerically. These included OPAL and Ferguson opacities, equations of state, and treatment of convection. The purpose of the project was to make realistic and general models of accretion discs covering a wide parameter space from Cataclysmic Variables to Active Galactic Nuclei and to investigate instabilities caused by the onset of convection and hydrogen recombination.
 \end{itemize} 
 
 {\bf GIST General Intelligence and Smart Environment Laboratory}\\
-{\sl Student Intern} \hfill October 2015 - August 2017 \\
+{\sl Student Intern} \hfill Oct. 2015 - Aug. 2017 \\
 Supervisor: Prof. Kin Choong Yow
 \begin{itemize}
-\item[] {\sl Studying Deep Learning and its applications to physics problem.}\\
+\item[] {\sl Studying deep learning and its applications to physics problems.}\\
 I learned object oriented programming with C\texttt{++}, and deep learning with Google's Tensorflow. Also, I worked on a project to derive physical formulae from data based on Google's TensorFlow Python scripts.
 \end{itemize} 
-
-\section{TEACHING EXPERIENCE}
-
-{\sl Teaching Assistant} \hfill March 2018 - June 2018 \\
-GIST PS3101 Electromagnetism II (3rd year course)
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[] I was selected to be the Teaching Assistant as the best student of previous year's class. I graded problem sets, midterm and final exams. I also held weekly office hours to answer questions from students.
-\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	Publication & Talks SECTION
 %---------------------------------------------------------------------------------------- 
 
 \section{PUBLICATIONS}
-Prochaska J.X. et. al., {\sl The low density and magnetization of a massive galaxy halo exposed by a fast radio burst}\\
-\begin{tabular}{rl}
-{\sl submitted to Science, co-author}
-\end{tabular}\\
-Cho H. et. al., {\sl Reconstruction of ASKAP FRBs to the Order of a Nanosecond Time Resolution via Polyphase Filterbank Inversion}\\
-\begin{tabular}{rl}
-{\sl in preparation, first author}
-\end{tabular}\\
+\href{https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=Hyerin+Cho&terms-0-field=author&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first}{arXiv}, \href{https://ui.adsabs.harvard.edu/search/q=orcid\%3A\%220000-0002-2858-9481\%22&sort=date\%20desc\%2C\%20bibcode\%20desc&p_=0}{ads}
+\begin{enumerate}
+    \item Articles published or accepted in refereed journals\\
+    %J. X. Prochaska, J. P. Macquart, M. {McQuinn}, S. {Simha}, R. M. {Shannon}, C. K. {Day}, L. {Marnoch}, S. {Ryder}, A. {Deller}, K. W. {Bannister}, S. {Bhandari}, R. {Bordoloi}, J. {Bunton}, \textbf{Hyerin Cho}, C. {Flynn}, E. K. {Mahony}, C. {Phillips}, H. {Qiu}, N. {Tejos} 2019, ``{\sl The low density and magnetization of a massive galaxy halo exposed by a fast radio burst}'', Science, 365
+    - J. X. Prochaska et. al. 2019 \href{https://science.sciencemag.org/content/366/6462/231/tab-pdf}{Science}, 366, ``{\sl The low density and magnetization of a massive galaxy halo exposed by a fast radio burst}''\\
+    - \textbf{Hyerin Cho} et. al. 2020 \href{https://iopscience.iop.org/article/10.3847/2041-8213/ab7824/pdf}{ApJL}, 891, ``{\sl Spectropolarimetric analysis of FRB\,181112 at microsecond resolution: Implications for Fast Radio Burst emission mechanism}''\\
+    - M. W. Sammons et. al. 2020 \href{https://iopscience.iop.org/article/10.3847/1538-4357/aba7bb}{ApJ}, 900, ``{\sl First constraints on compact dark matter from Fast Radio Burst microstructure}''\\
+    - S. Bhandari et. al. 2020, accepted to ApJL, ``{\sl Limits on precursor and afterglow radio emission from a fast radio burst in a star-forming galaxy}'' \href{https://arxiv.org/abs/2008.12488}{arXiv:2008.12488}
+    %\item Articles submitted to refereed journals\\
+    
+    %\item Articles in preparation\\
+\end{enumerate}
+%{\sl Rich temporal and spectral structures of ASKAP FRB\,181112 observed at nanoseconds resolution}\\
+%\begin{tabular}{rl}
+%{\sl (in preparation, very close to submission to ApJ Letters)}
+%\end{tabular}\\
+%Cho H. et. al., {\sl Reconstruction of ASKAP FRBs to the order of a nanosecond time resolution via polyphase filterbank inversion}\\
+%\begin{tabular}{rl}
+%{\sl (in preparation)}
+%\end{tabular}\\
 
 \section{TALKS}
-
-{\bf \sl Caltech SURF Seminar Day} \hfill{August 2018}\\
+{\bf \sl Caltech SURF Seminar Day} \hfill{Aug. 2018}\\
 %Presentation of summer research project. \\
-{\bf \sl ICRAR Summer Student Talk} \hfill{February 2019}\\
+{\bf \sl ICRAR Summer Student Talk} \hfill{Feb. 2019}\\
 %Presentation of summer research project.
+{\bf \sl GIST SNL} ("Science" Night Live) talk on FRBs \hfill{October 2019}\\
+
+
+\section{TEACHING EXPERIENCE}
+
+{\sl Teaching Assistant} \hfill Sep. 2019 - Dec. 2019 \\
+GIST MM4016 Introduction to Topology (4th-year course)
+%\begin{itemize} \itemsep -2pt % Reduce space between items
+%\item[] 
+%\end{itemize}
+
+{\sl Teaching Assistant} \hfill Mar. 2018 - Jun. 2018 \\
+GIST PS3101 Electromagnetism II (3rd-year course)
+%\begin{itemize} \itemsep -2pt % Reduce space between items
+%\item[] I was selected to be the Teaching Assistant as the best student in the previous year's class. I graded problem sets, midterm and final exams. I also held weekly office hours to answer questions from students.
+%\end{itemize}
+
 
 %----------------------------------------------------------------------------------------
 %	Awards & Fellowships SECTION
 %---------------------------------------------------------------------------------------- 
 
 \section{AWARDS \& \\ FELLOWSHIPS}
-
-Korea National Science and Engineering Scholarship\footnote{Full tuition covered for four years from Korea Student Aid Foundation, Ministry of Education} \hfill March 2015 - Present\\
-Caltech Summer Undergraduate Research Fellowship \hfill June 2018 - August 2018\\
-CIRA Summer Studentship \hfill December 2018 - February 2019\\
+Korea National Science and Engineering Scholarship\footnote{Full tuition covered for 8 semesters from Korea Student Aid Foundation, Ministry of Education \href{https://www.gov.kr/portal/service/serviceInfo/B55252900005}{(국가이공계장학금)}} \hfill Mar. 2015 - Feb. 2020\\
+Caltech Summer Undergraduate Research Fellowship \hfill Jun. 2018 - Aug. 2018\\
+CIRA Summer Studentship \hfill Dec. 2018 - Feb. 2019\\
+GIST Outstanding Thesis Award (우수논문상) \hfill Feb. 2020\\
+GIST Future Research Talent Award (미래인재상) \hfill Feb. 2020\\
+Ilju Foundation Study Abroad Doctoral Program Scholarship \hfill Aug. 2020 - Jul. 2024
 
 
 %----------------------------------------------------------------------------------------
@@ -175,16 +219,16 @@ CIRA Summer Studentship \hfill December 2018 - February 2019\\
 {\sl Programming Languages:}\\%\footnote{In order of decreasing familiarity.}\\
 \begin{tabular}{rl}
     Working knowledge of:& Python, MATLAB, bash\\
-    Familiar with:& C\texttt{++}, C shell, Mathematica\\
-     Basic knowledge of:& Fortran, C \\
+    Familiar with:& C\texttt{++}, C, C shell, Mathematica\\
+     Basic knowledge of:& Fortran\\
 \end{tabular}\\
 {\sl Operating Systems:} Linux, Windows \\
-{\sl Others:} MESA, TensorFlow, Slurm\\
+{\sl Others:} MESA, TensorFlow\\
  
 \section{LANGUAGE \\ PROFICIENCY} 
 
 Korean (native) \\
-English (fluent\footnote{Cumulative 3 years living in the U.S. during middle school and university.}) \\
+English (fluent\footnote{Cumulative 3 years living in the U.S. during middle school and university. 6 months living in Australia during research internships.}) \\
 Japanese, Chinese (basic knowledge) \\
  
 
@@ -194,16 +238,24 @@ Japanese, Chinese (basic knowledge) \\
 
 \section{OTHER \\ ACTIVITIES} 
 
-GIST student ambassador, {\sl Member} \hfill March 2015 - December 2015\\
-GIST student council, {\sl Member} \hfill June 2015 - February 2016\\
-GIST student ambassador, {\sl Vice President} \hfill December 2015 - December 2016 \\
-MESA\footnote{Modules for Experiments in Stellar Astrophysics} Summer School, {\sl Student} \hfill August 2018 \\
-Palomar Observatory observing proposal accepted for one night \hfill August 2018
+GIST student ambassador, {\sl Member} \hfill Mar. 2015 - Dec. 2015\\
+GIST student council, {\sl Member} \hfill Jun. 2015 - Feb. 2016\\
+GIST student ambassador, {\sl Vice President} \hfill Dec. 2015 - Dec. 2016 \\
+MESA\footnote{Modules for Experiments in Stellar Astrophysics} Summer School, {\sl Student} \hfill Aug. 2018 \\
+Palomar Observatory observing proposal accepted for one night \hfill Aug. 2018
 \begin{itemize}
 \item[] Spectroscopic follow-up observation of several short period binaries discovered with ZTF
 \end{itemize}
-APCTP\footnote{\href{https://www.apctp.org/main/}{Asia Pacific Center for Theoretical Physics}}-NIMS-KISTI-UNIST-KASI Summer School on Numerical Relativity and Gravitational Waves, {\sl Student} \hfill June 2019 \\
-CTPU\footnote{\href{https://ctpu.ibs.re.kr/html/ctpu_en/}{Center for Theoretical Physics of the Universe, Institute for Basic Science, Korea}}  Summer School on Cosmology and Particle Physics, {\sl Student} \hfill July 2019 \\
+APCTP\footnote{\href{https://www.apctp.org/main/}{Asia Pacific Center for Theoretical Physics}}-NIMS-KISTI-UNIST-KASI Summer School on Numerical Relativity and Gravitational Waves, {\sl Student} \hfill Jun. 2019 \\
+CTPU\footnote{\href{https://ctpu.ibs.re.kr/html/ctpu_en/}{Center for Theoretical Physics of the Universe, Institute for Basic Science, Korea}}  Summer School on Cosmology and Particle Physics, {\sl Student} \hfill Jul. 2019 \\
+\href{https://www.cfa.harvard.edu/events/2019/casper/index.html}{2019 CASPER Workshop \& PIRE DSP School}, {\sl Student} \hfill Aug. 2019
+\begin{itemize}
+\item[] Accepted to get student travel/accommodation support to Harvard
+\end{itemize}
+Student-led study group \hfill Sep. 2019 - Dec. 2019
+\begin{itemize}
+    \item[] I taught General Relativity and my study plan and notes can be found \href{https://docs.google.com/spreadsheets/d/148MdZeH7q8QX9hl4hwpG867U84EG6tA_QnvUUvUCtcQ/edit?usp=sharing}{here}
+\end{itemize}
 
 
 %----------------------------------------------------------------------------------------
@@ -214,7 +266,7 @@ CTPU\footnote{\href{https://ctpu.ibs.re.kr/html/ctpu_en/}{Center for Theoretical
 
 Physics GRE 990/990 \\
 General GRE Verbal(158/170), Quantitative(169/170), Analytical Writing(4/6) \\
-TOEFL 110/120 (expired, retake scheduled on June 15th, 2019)\\
+TOEFL 111/120\\
 
 %----------------------------------------------------------------------------------------
 %	HOBBIES
@@ -226,7 +278,7 @@ Hiphop dance
 \begin{itemize}
 \item[] I was a practice director of a dance club in GIST, and I was also an instructor for a hiphop class in Caltech.
 \end{itemize}
-Yoga, especially flying/aerial yoga
+Yoga, especially aerial yoga or pilates
 
 %----------------------------------------------------------------------------------------
 

@@ -190,6 +190,8 @@
 
 \newif\if@line
 \newif\if@margin
+\newif\if@PDFdoc\@PDFdocfalse
+\newif\if@dvips\@dvipsfalse
 
 \DeclareOption{line}{\@linetrue}
 \DeclareOption{centered}{\@linefalse}
@@ -798,5 +800,66 @@
 \location{l}\dates{r}\\
 \body\\
 \end{format}
+
+%%%% Hangul-ucs preamble.......
+\RequirePackage[nonfrench]{dhucs}
+%\RequirePackage[default]{dhucs-interword}
+\RequirePackage{ifpdf}
+\ifpdf
+\def\@drivername{pdftex}
+\else
+\def\@drivername{dvipdfmx}
+\fi
+\if@dvips
+\def\@drivername{dvips}
+\fi
+
+\RequirePackage[\@drivername]{graphicx,xcolor}
+
+\usepackage{color}
+\definecolor{cyan}{cmyk}{1,0,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{magenta}{cmyk}{0,1,0,0}
+\definecolor{darkyellow}{cmyk}{0,0,0.75,0}
+\definecolor{darkred}{rgb}{0.4,0,0}
+\definecolor{darkgreen}{rgb}{0,0.25,0}
+\definecolor{darkblue}{rgb}{0,0,0.55}
+\definecolor{darkcyan}{cmyk}{0.75,0,0,0}
+\definecolor{darkmagenta}{cmyk}{0,0.75,0,0}
+\definecolor{darkyellow}{cmyk}{0,0,0.75,0}
+
+\if@PDFdoc
+\RequirePackage[unicode,%
+\@drivername=true,%
+bookmarks=true,%
+colorlinks=true,%
+linkcolor=darkred,      %red
+anchorcolor=black,      %black
+citecolor=darkgreen,    %green
+filecolor=darkmagenta,  %magenta
+menucolor=darkred,      %red
+urlcolor=darkcyan,      %cyan
+]{hyperref}
+\else
+\RequirePackage[unicode,%
+\@drivername=true,%
+bookmarks=false,%
+colorlinks=false,%
+colorlinks=true,        %remove square
+linkcolor=darkred,      %red
+anchorcolor=black,      %black
+citecolor=darkgreen,    %green
+filecolor=darkmagenta,  %magenta
+menucolor=darkred,      %red
+urlcolor=darkcyan,      %cyan
+]{hyperref }
+\fi
+
+%% for compatability to HLaTeX
+\let\gt\sffamily
+\DeclareTextFontCommand{\textgt}{\gt}
+%%%% end of Hangul-ucs preamble
+
 
 \let\section\@@section
