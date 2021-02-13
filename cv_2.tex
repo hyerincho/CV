@@ -36,6 +36,14 @@
     urlcolor=blue,
 }
 
+\newcounter{daggerfootnote}
+\newcommand*{\daggerfootnote}[1]{%
+    \setcounter{daggerfootnote}{\value{footnote}}%
+    \renewcommand*{\thefootnote}{\fnsymbol{footnote}}%
+    \footnote[2]{#1}%
+    \setcounter{footnote}{\value{daggerfootnote}}%
+    \renewcommand*{\thefootnote}{\arabic{footnote}}%
+    }
 \usepackage{url}
 
 \setlength{\textwidth}{5.1in} % Text width of the document
@@ -52,9 +60,9 @@
 
 \moveleft.5\hoffset\centerline{14 Osan-ro 160beon-gil}
 \moveleft.5\hoffset\centerline{Osan-si, Gyeonggi-do, 18143, Rep. of Korea}
-\moveleft.5\hoffset\centerline{hyerin.cho@cfa.harvard.edu, chyerin1996@gmail.com}
-\moveleft.5\hoffset\centerline{LinkedIn: www.linkedin.com/in/hyerin-cho-gist/}
-%\moveleft.5\hoffset\centerline{Website: https://hyerincho.github.io}
+\moveleft.5\hoffset\centerline{\href{mailto:hyerin.cho@cfa.harvard.edu}{hyerin.cho@cfa.harvard.edu}, \href{mailto:chyerin1996@gmail.com}{chyerin1996@gmail.com}}
+\moveleft.5\hoffset\centerline{LinkedIn: \href{https://www.linkedin.com/in/hyerin-cho-astro/}{www.linkedin.com/in/hyerin-cho-astro}}
+\moveleft.5\hoffset\centerline{Website: \href{https://hyerincho.com}{hyerincho.com}}
 
 %----------------------------------------------------------------------------------------
 
@@ -108,13 +116,14 @@ The Beauty and Joy of Computing
 {\sl Visiting Student Intern} \\
 Supervisor: Prof. Ji-hoon Kim
 \begin{itemize}
-\item[] %{\sl }  \\
-Work in progress
+\item[] {\sl Impacts of galactic perturbers on fueling the MBH with a resolution appropriate accretion model}  \\
+The project investigated the impacts of various galactic perturbers such as minor galactic mergers or colliding gas clumps on fueling the central massive black holes in galaxies. For this project, an isolated galaxy was constructed and simulated as a test object to conduct such experiments on. We were able to achieve subparsec resolution with the adaptive mesh refinement cosmological simulation code \href{https://enzo-project.org/}{Enzo} and we employed a resolution appropriate accretion model for the central black hole corresponding to such extremely high resolution of the simulation.
+%Due to the start of my Ph.D. program, the project is handed over to another student at SNU and is in progress, but I am still involved in the project.
 \end{itemize} 
 
 {\bf OzGrav, Swinburne University of Technology} \hfill Mar. 2019 - Jun. 2019 \\
 {\sl Visiting Student Intern} \\
-Supervisors: Prof. Matthew Bailes, Prof. Adam Deller, Dr. Ryan Shannon
+Supervisors: Prof. Matthew Bailes, Prof. Adam Deller, Prof. Ryan Shannon
 \begin{itemize}
 \item[] {\sl Localized ASKAP FRBs' high time resolution and their analysis.}\\
 The work is continued from the previous project from CIRA, which is improving my software that recovers full time resolution of localized ASKAP FRB voltage data. I have generalized this software for any localized sources for ASKAP and have done high time resolution analysis. This has opened up new ways to study both FRBs and the matter that their radiation encounters on its trek through the Universe. My software and analysis led to new results about the properties of matter in the outer parts of galaxies (its “halo”), as probed by an FRB. Therefore, I am a co-author of a paper on these results, published in the journal \textit{Science} in October 2019.  % \\
@@ -160,7 +169,7 @@ I learned object oriented programming with C\texttt{++}, and deep learning with 
     - J. X. Prochaska et. al. 2019 \href{https://science.sciencemag.org/content/366/6462/231/tab-pdf}{Science}, 366, ``{\sl The low density and magnetization of a massive galaxy halo exposed by a fast radio burst}''\\
     - \textbf{Hyerin Cho} et. al. 2020 \href{https://iopscience.iop.org/article/10.3847/2041-8213/ab7824/pdf}{ApJL}, 891, ``{\sl Spectropolarimetric analysis of FRB\,181112 at microsecond resolution: Implications for Fast Radio Burst emission mechanism}''\\
     - M. W. Sammons et. al. 2020 \href{https://iopscience.iop.org/article/10.3847/1538-4357/aba7bb}{ApJ}, 900, ``{\sl First constraints on compact dark matter from Fast Radio Burst microstructure}''\\
-    - S. Bhandari et. al. 2020, accepted to ApJL, ``{\sl Limits on precursor and afterglow radio emission from a fast radio burst in a star-forming galaxy}'' \href{https://arxiv.org/abs/2008.12488}{arXiv:2008.12488}
+    - S. Bhandari et. al. 2020 \href{https://iopscience.iop.org/article/10.3847/2041-8213/abb462}{ApJL}, 901, ``{\sl Limits on precursor and afterglow radio emission from a fast radio burst in a star-forming galaxy}''\\
     %\item Articles submitted to refereed journals\\
     
     %\item Articles in preparation\\
@@ -174,12 +183,38 @@ I learned object oriented programming with C\texttt{++}, and deep learning with 
 %{\sl (in preparation)}
 %\end{tabular}\\
 
+
+
+
+%----------------------------------------------------------------------------------------
+%	Awards & Fellowships SECTION
+%---------------------------------------------------------------------------------------- 
+
+\section{AWARDS \& \\ FELLOWSHIPS}
+\textbf{Ilju Foundation Study Abroad Scholarship} \hfill Aug. 2020 - Jul. 2024
+\begin{itemize}
+    \item[] A very competitive scholarship granting 30,000 USD per year for four years during a Ph.D. program. The foundation selected 6 distinguished students from all majors out of 184 applicants.
+\end{itemize}
+\textbf{Talent Award of Korea} (대한민국인재상) \hfill Dec. 2020
+\begin{itemize}
+    \item[] An award bestowed by the Minister of Education of Korea. It recognizes those individuals who are likely to become Korea's future leaders and have performed exemplary talents.
+\end{itemize}
+GIST Outstanding Thesis Award (우수논문상) \hfill Feb. 2020\\
+GIST Future Research Talent Award (미래인재상) \hfill Feb. 2020\\
+Korea National Science and Engineering Scholarship \hfill Mar. 2015 - Feb. 2020
+\begin{itemize}
+    \item[] A scholarship to fund full tuition for 8 semesters from Korea Student Aid Foundation, Ministry of Education \href{https://www.gov.kr/portal/service/serviceInfo/B55252900005}{(국가이공계장학금)}
+\end{itemize}
+CIRA Summer Studentship \hfill Dec. 2018 - Feb. 2019\\
+Caltech Summer Undergraduate Research Fellowship \hfill Jun. 2018 - Aug. 2018\\
+
+
 \section{TALKS}
-{\bf \sl Caltech SURF Seminar Day} \hfill{Aug. 2018}\\
-%Presentation of summer research project. \\
+{\bf \sl GIST SNL} (``Science" Night Live) talk on my FRB research \hfill{Oct. 2019}\\
 {\bf \sl ICRAR Summer Student Talk} \hfill{Feb. 2019}\\
 %Presentation of summer research project.
-{\bf \sl GIST SNL} ("Science" Night Live) talk on FRBs \hfill{October 2019}\\
+{\bf \sl Caltech SURF Seminar Day} \hfill{Aug. 2018}\\
+%Presentation of summer research project. \\
 
 
 \section{TEACHING EXPERIENCE}
@@ -196,19 +231,20 @@ GIST PS3101 Electromagnetism II (3rd-year course)
 %\item[] I was selected to be the Teaching Assistant as the best student in the previous year's class. I graded problem sets, midterm and final exams. I also held weekly office hours to answer questions from students.
 %\end{itemize}
 
-
-%----------------------------------------------------------------------------------------
-%	Awards & Fellowships SECTION
-%---------------------------------------------------------------------------------------- 
-
-\section{AWARDS \& \\ FELLOWSHIPS}
-Korea National Science and Engineering Scholarship\footnote{Full tuition covered for 8 semesters from Korea Student Aid Foundation, Ministry of Education \href{https://www.gov.kr/portal/service/serviceInfo/B55252900005}{(국가이공계장학금)}} \hfill Mar. 2015 - Feb. 2020\\
-Caltech Summer Undergraduate Research Fellowship \hfill Jun. 2018 - Aug. 2018\\
-CIRA Summer Studentship \hfill Dec. 2018 - Feb. 2019\\
-GIST Outstanding Thesis Award (우수논문상) \hfill Feb. 2020\\
-GIST Future Research Talent Award (미래인재상) \hfill Feb. 2020\\
-Ilju Foundation Study Abroad Doctoral Program Scholarship \hfill Aug. 2020 - Jul. 2024
-
+\section{COURSES}
+The courses taken at Caltech are denoted with \textsuperscript{\textdagger}.\\
+\textit{Physics}
+\begin{itemize}
+    \item[] General Physics I (B+) II (A)
+    \item[] Classical Mechanics (B0), Electromagnetism I (B+) II (A+), Mathematical Methods of Physics (A+), Quantum Physics I (A+) II (A+), Statistical Physics\textsuperscript{\textdagger} (A+)
+    \item[] Introduction to Optics (A+), Advanced Quantum Physics (A+), Solid State Physics (A+), Basic Astronomy and the Galaxy\textsuperscript{\textdagger} (B+)
+    \item[] General Physics Experiment I (A) II (A), Advanced Physics Laboratory\textsuperscript{\textdagger} (A), Experimental Physics II (A+)
+\end{itemize}
+\textit{Mathematics}
+\begin{itemize}
+    \item[] Single Variable Calculus (A+), Multivariable Calculus (A+), Introduction to Linear Algebra (A), Differential Equations (A+)
+    \item[] Introduction to Probility Models\textsuperscript{\textdagger} (A), Abstract Algebra (A), Complex Analysis (A)
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	Technology SKILLS SECTION
@@ -238,24 +274,28 @@ Japanese, Chinese (basic knowledge) \\
 
 \section{OTHER \\ ACTIVITIES} 
 
-GIST student ambassador, {\sl Member} \hfill Mar. 2015 - Dec. 2015\\
-GIST student council, {\sl Member} \hfill Jun. 2015 - Feb. 2016\\
-GIST student ambassador, {\sl Vice President} \hfill Dec. 2015 - Dec. 2016 \\
-MESA\footnote{Modules for Experiments in Stellar Astrophysics} Summer School, {\sl Student} \hfill Aug. 2018 \\
-Palomar Observatory observing proposal accepted for one night \hfill Aug. 2018
+Overseas graduate program preparation seminar \hfill Sep. 2020
 \begin{itemize}
-\item[] Spectroscopic follow-up observation of several short period binaries discovered with ZTF
+    \item[]  I hosted a student-led seminar for GIST students who are interested in applying for graduate schools overseas but have difficulties accessing relevant information. I gathered a total of 132 students as an audience and invited more than nine GIST alums as panelists who are studying/have studied abroad at Stanford, Caltech, UCSB, etc.
 \end{itemize}
-APCTP\footnote{\href{https://www.apctp.org/main/}{Asia Pacific Center for Theoretical Physics}}-NIMS-KISTI-UNIST-KASI Summer School on Numerical Relativity and Gravitational Waves, {\sl Student} \hfill Jun. 2019 \\
-CTPU\footnote{\href{https://ctpu.ibs.re.kr/html/ctpu_en/}{Center for Theoretical Physics of the Universe, Institute for Basic Science, Korea}}  Summer School on Cosmology and Particle Physics, {\sl Student} \hfill Jul. 2019 \\
+Student-led study group \hfill Sep. 2019 - Dec. 2019
+\begin{itemize}
+    \item[] I taught General Relativity and in return was taught Fluid Dynamics. My study plan and notes can be found \href{https://docs.google.com/spreadsheets/d/148MdZeH7q8QX9hl4hwpG867U84EG6tA_QnvUUvUCtcQ/edit?usp=sharing}{here}
+\end{itemize}
 \href{https://www.cfa.harvard.edu/events/2019/casper/index.html}{2019 CASPER Workshop \& PIRE DSP School}, {\sl Student} \hfill Aug. 2019
 \begin{itemize}
 \item[] Accepted to get student travel/accommodation support to Harvard
 \end{itemize}
-Student-led study group \hfill Sep. 2019 - Dec. 2019
+CTPU\footnote{\href{https://ctpu.ibs.re.kr/html/ctpu_en/}{Center for Theoretical Physics of the Universe, Institute for Basic Science, Korea}}  Summer School on Cosmology and Particle Physics, {\sl Student} \hfill Jul. 2019 \\
+APCTP\footnote{\href{https://www.apctp.org/main/}{Asia Pacific Center for Theoretical Physics}}-NIMS-KISTI-UNIST-KASI Summer School on Numerical Relativity and Gravitational Waves, {\sl Student} \hfill Jun. 2019 \\
+Palomar Observatory observing proposal accepted for one night \hfill Aug. 2018
 \begin{itemize}
-    \item[] I taught General Relativity and my study plan and notes can be found \href{https://docs.google.com/spreadsheets/d/148MdZeH7q8QX9hl4hwpG867U84EG6tA_QnvUUvUCtcQ/edit?usp=sharing}{here}
+\item[] Spectroscopic follow-up observation of several short period binaries discovered with ZTF
 \end{itemize}
+MESA\footnote{Modules for Experiments in Stellar Astrophysics} Summer School, {\sl Student} \hfill Aug. 2018 \\
+GIST student ambassador, {\sl Vice President} \hfill Dec. 2015 - Dec. 2016 \\
+GIST student council, {\sl Member} \hfill Jun. 2015 - Feb. 2016\\
+GIST student ambassador, {\sl Member} \hfill Mar. 2015 - Dec. 2015\\
 
 
 %----------------------------------------------------------------------------------------
